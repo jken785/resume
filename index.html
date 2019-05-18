@@ -13,10 +13,10 @@
 </head>
 
 <body>
-    <div class="container">
 
-        <div class="d-flex justify-content-between align-self-end align-items-end">
-            <div class="text-muted text-left">
+    <div id="header-container" class=" container-fluid">
+        <div id="desktop-header" class="d-flex justify-content-around align-self-end align-items-end">
+            <div class="contact text-muted text-left">
                 1234 Delmar Blvd.<br>
                 Unit #1234<br>
                 Saint Louis, MO 12345
@@ -26,21 +26,41 @@
                     Jake Kendrick
                 </h1>
             </div>
-            <div class="text-muted text-right">
+            <div class="contact text-muted text-right">
 
                 720-545-6432<br>
                 jake.kendrick@gmail.com<br>
                 jake.kendrick@wustl.edu
             </div>
-
         </div>
-        <hr>
 
+        <div id="mobile-header">
+            <h1 class="text-center">
+                Jake Kendrick
+            </h1>
+            <div class="d-flex justify-content-between align-self-end align-items-end">
+                <div class="contact text-muted text-left">
+                    1234 Delmar Blvd.<br>
+                    Unit #1234<br>
+                    Saint Louis, MO 12345
+                </div>
+                <div class="contact text-muted text-right">
+                    720-545-6432<br>
+                    jake.kendrick@gmail.com<br>
+                    jake.kendrick@wustl.edu
+                </div>
+            </div>
+        </div>
+
+        <hr>
+    </div>
+
+    <div id="main" class="container">
         <div class="ani row">
-            <div class="lead col-3">
+            <div class="lead col-12 col-md-3">
                 Summary
             </div>
-            <div class="col-9">
+            <div class="col-12 col-md-9">
                 Third-year computer science student with substantial experience in engineering design, simulation-based
                 optimization and hardware-software integration. Seeking a full-time internship over the summer of 2019
                 relating to software or web development.
@@ -48,10 +68,10 @@
         </div>
 
         <div class="ani row">
-            <div class="lead col-3">
+            <div class="lead col-12 col-md-3">
                 Education
             </div>
-            <div class="col-9">
+            <div class="col-12 col-md-9">
                 <b>B.S. in Computer Science</b> - Washington University in St. Louis <br>
                 <span class="text-muted">
                     Minors: Mechanical Engineering, Materials Science <br>
@@ -117,10 +137,10 @@
         </div>
 
         <div class="ani row">
-            <div class="lead col-3">
+            <div class="lead col-12 col-md-3">
                 Engineering Experience
             </div>
-            <div class="col-9">
+            <div class="col-12 col-md-9">
 
                 <div id="accordion">
                     <div class="card">
@@ -296,26 +316,116 @@
             </div>
 
 
-            <div class="ani row">
-                <div class="lead col-3">
-                    Other Work Experience
-                </div>
-                <div class="col-9">
-                    Third-year computer science student with substantial experience in engineering design,
-                    simulation-based
-                    optimization and hardware-software integration. Seeking a full-time internship over the summer of
-                    2019
-                    relating to software or web development.
-                </div>
-            </div>
+
 
 
 
 
         </div>
 
+        <div class="ani row">
+            <div class="lead col-12 col-md-3">
+                Skills
+            </div>
+            <div class="col-12 col-md-9">
+                <div class="skill-label text-muted">
+                    Fluency:
+                </div>
+                <div class="skill-flex d-flex flex-wrap">
+                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
+                        title="Experience:" data-placement="top" data-content="Used MATLAB to code the first draft of my stiffness optimization software. Also used it extensively in
+                        Intro to Machine Learning.">MATLAB</a>
+                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
+                        title="Experience:" data-placement="top"
+                        data-content="Used in my first four computer science classes at WashU, and it was my first programming language.">Java</a>
+                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
+                        title="Experience:" data-placement="top"
+                        data-content="In addition to personal website projects, I have used HTML and CSS extensively in my classes.">HTML/CSS</a>
+                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
+                        title="Experience:" data-placement="top"
+                        data-content="Used in my web development and rapid prototyping classes in addition to personal creative projects.">JavaScript
+                        and jQuery</a>
+                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
+                        title="Experience:" data-placement="top" data-content="Used to code my stiffness optimization software, which is object-oriented and supports multithreading. Also
+                        used to develop a web interface for that software with Django (still in progress).">Python
+                        (w/Django)</a>
+                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
+                        title="Experience:" data-placement="top"
+                        data-content="Coded several command-line programs as part of my Object-Oriented Programming Lab.">C++</a>
 
+                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
+                        title="Experience:" data-placement="top"
+                        data-content="Extremely experienced with this software as I used it throughout my time on the WashU Racing team (see my full car model above).">Solidworks</a>
 
+                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
+                        title="Experience:" data-placement="top"
+                        data-content="Proficient in all the major programs, including MS Project.">MS Office</a>
+                </div>
+                <div class="skill-label text-muted">
+                    <div class="skill-label text-muted">
+                        Proficiency:
+                    </div>
+                    <div class="skill-flex d-flex">
+                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
+                            title="Experience:" data-placement="top"
+                            data-content="Used in several Rapid Prototyping Projects (file serving, user authentication, database management).">PHP</a>
+                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
+                            title="Experience:" data-placement="top"
+                            data-content="Used in my Rapid Prototyping projects for database management.">MySQL</a>
+                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
+                            title="Experience:" data-placement="top"
+                            data-content="Used to write reports in most of my computer science classes.">LaTeX</a>
+                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
+                            title="Experience:" data-placement="top" data-content="Used to make CAM programs for 3-axis milling. I have milled foam, wood and metals for uses ranging from composite molds to shifter handles
+                            for the WashU Racing vehicle.">FeatureCAM</a>
+                    </div>
+                </div>
+                <div class="skill-label text-muted">
+                    <div class="skill-label text-muted">
+                        Other Skills:
+                    </div>
+                    <div class="skill-flex d-flex">
+                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
+                            title="Experience:" data-placement="top" data-content="Took 5 years of Spanish classes in high school, in addition to attending a fully bilingual elementary school. Have taken
+                            cultural-immersion trips to Costa Rica and Cuba.">Conversational in Spanish</a>
+                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
+                            title="Experience:" data-placement="top"
+                            data-content="Making music is a passionate hobby of mine. I have acquired a lot of experience recording out of my home studio. I have also dabble in video production.">Audio/Video
+                            Recording and Editing</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="ani row">
+            <div class="lead col-12 col-md-3">
+                Other Work Experience
+            </div>
+            <div class="col-12 col-md-9">
+                <b>Sales Associate</b> - Sherwin-Williams Paint Co.
+                <div class="text-muted">
+                    6/2017 to 2/2018
+                </div>
+                <ul>
+                    <li>Tinted paint per customer orders, stocked products and made sales phone calls to contractors
+                    </li>
+                    <li>Received Employee of the Month in December 2017</li>
+                </ul>
+                <b>Cook and Delivery Driver</b> - Marco's Pizza
+                <div class="text-muted">
+                    6/2017 to 8/2017
+                </div>
+                <b>Volunteer</b> - Avista Adventist Hospital
+                <div class="text-muted">
+                    9/2015 to 4/2016
+                </div>
+                <b>Alfalfa's Market</b> - Cashier
+                <div class="text-muted">
+                    6/2014 to 8/2016
+                </div>
+            </div>
+        </div>
 
 
 

@@ -1,5 +1,5 @@
 body {
-    background-color: #FCFCFC;
+    background-color: #FAFAFA;
     opacity: 0;
     overflow-x: auto;
     overflow-y: scroll;
@@ -7,7 +7,11 @@ body {
 }
 
 .container {
-    margin-top: 50px;
+    margin-top: 20px;
+}
+
+.container-fluid {
+    padding-top: 20px;
 }
 
 #contact-info {
@@ -43,13 +47,17 @@ a:hover {
     text-decoration: none;
 }
 
+a {
+    color: #17A2B8;
+}
+
 #classes {
     padding: 10px;
     margin-left: 10px;
 }
 
 .btn-link:focus, .btn-link:hover, .btn-link:active {
-    color: black;
+    color: #17A2B8;
     text-decoration: none;
 }
 
@@ -64,17 +72,21 @@ a:hover {
     -moz-transition: .25s;
     -webkit-transition: .25s;
     transition: .25s;
-    background-color: #FCFCFC;
+    background-color: #F9F9F9;
 }
 
 .card-header:hover {
-    background-color: #FEFEFE;
+    background-color: #FDFDFD;
 }
 
 h1 {
     margin: 0;
     padding: 0;
-    font-size: 60px;
+    font-size: 3vw;
+}
+
+.contact {
+    color: #17A2B8 !important;
 }
 
 div {
@@ -85,8 +97,55 @@ div {
 hr {
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+    margin-bottom: 0;
 }
 
 .ani {
     margin-top: 35px;
+}
+
+#mobile-header {
+    display: none;
+}
+
+#header-container {
+    background-color: #FAFAFA;
+}
+
+.skill-label {
+    margin-bottom: 10px;
+}
+
+.skill-flex {
+    margin-bottom: 10px;
+}
+
+.skill-flex > a {
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.btn-info {
+    background-color: #333333;
+    border-width: 0;
+    outline: none;
+}
+
+.btn-info:hover {
+    background-color: #17A2B8 !important;
+}
+
+@media only screen and (max-width: 768px) {
+    #mobile-header {
+        display: block;
+    }
+    #desktop-header {
+        display: none !important;
+    }
+    h1 {
+        font-size: 5vw;
+    }
+    .lead {
+        margin-bottom: 5px;
+    }
 }
