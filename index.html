@@ -4,33 +4,33 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="customStyle.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Jake Kendrick</title>
 </head>
 
 <body>
-
-    <div id="header-container" class=" container-fluid">
-        <div id="desktop-header" class="d-flex justify-content-around align-self-end align-items-end">
-            <div class="contact text-muted text-left">
-                8342 Delcrest Dr.<br>
-                Unit #138<br>
-                Saint Louis, MO 63124
+    <div id="header-container" class="container-fluid">
+        <div id="desktop-header" class="d-flex justify-content-center align-self-end align-items-center">
+            <div class="photo">
+                <img class="img-fluid" src="myself.jpg" alt="Headshot">
             </div>
-            <div>
-                <h1 class="text-center">
+            <div class="nameAndContact">
+                <h1 class="name">
                     Jake Kendrick
-                </h1>
-            </div>
-            <div class="contact text-muted text-right">
-
-                720-545-6432<br>
-                jake.kendrick@gmail.com<br>
-                jake.kendrick@wustl.edu
+                </h1><br>
+                <span id="contact" class="text-muted">
+                    <table>
+                        <tr>
+                            <td class="left">785 Snowbird Lane</td>
+                            <td>720-545-6432</td>
+                        </tr>
+                        <tr>
+                            <td class="left">Lafayette, CO 80026</td>
+                            <td><a href="mailto:jake.kendrick@gmail.com">jake.kendrick@gmail.com</a></td>
+                        </tr>
+                    </table>
+                </span>
             </div>
         </div>
 
@@ -38,21 +38,25 @@
             <h1 class="text-center">
                 Jake Kendrick
             </h1>
-            <div class="d-flex justify-content-between align-self-end align-items-end">
+            <div class="d-flex justify-content-between align-self-end align-items-center">
                 <div class="contact text-muted text-left">
-                    8342 Delcrest Dr.<br>
-                    Unit #138<br>
-                    Saint Louis, MO 63124
+                    8342 Delcrest Dr.<br> Unit #138<br> Saint Louis, MO 63124
                 </div>
                 <div class="contact text-muted text-right">
-                    720-545-6432<br>
-                    jake.kendrick@gmail.com<br>
-                    jake.kendrick@wustl.edu
+                    720-545-6432<br> jake.kendrick@gmail.com
+                    <br> jake.kendrick@wustl.edu
                 </div>
             </div>
         </div>
 
-        <hr>
+        <div id="contactAux" class="d-flex justify-content-between align-self-end align-items-center">
+            <div>
+                720-545-6432
+            </div>
+            <div>
+                <a href="mailto:jake.kendrick@gmail.com">jake.kendrick@gmail.com</a>
+            </div>
+        </div>
     </div>
 
     <div id="main" class="container">
@@ -61,8 +65,7 @@
                 Summary
             </div>
             <div class="col-12 col-md-9">
-                Fourth-year computer science student with substantial experience ranging from engineering design and
-                simulation-based optimization to customer service and team leadership. Seeking a part-time summer job.
+                I am a senior computer science student studying at Washington University in St. Louis, with minors in mechanical engineering and materials science. I am seeking full-time post-graduation employment as a software engineer.
             </div>
         </div>
 
@@ -92,8 +95,7 @@
                                 <li><span class="text-muted">240</span> - Logic and Discrete Mathematics</li>
                                 <li><span class="text-muted">247</span> - Data Structures and Algorithms</li>
                                 <li><span class="text-muted">204</span> - Web Development</li>
-                                <li><span class="text-muted">330</span> - Rapid Prototype Development and Creative
-                                    Programming
+                                <li><span class="text-muted">330</span> - Rapid Prototype Development and Creative Programming
                                 </li>
                                 <li><span class="text-muted">332</span> - Object-Oriented Development Laboratory</li>
                                 <li><span class="text-muted">417</span> - Intro to Machine Learning</li>
@@ -142,8 +144,7 @@
                     <div class="card">
                         <div class="card-header" id="headingOne">
                             <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                    aria-expanded="true" aria-controls="collapseOne">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     <span class="float-left">
                                         <b>Chief Engineer</b> - WashU Racing
                                     </span>
@@ -156,23 +157,13 @@
                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body">
                                 <ul>
-                                    <li>Managed the technical aspect of our vehicle’s virtual and physical
-                                        builds,
-                                        including coordinating the work of eight system leads and over 30 other
-                                        team
-                                        members
+                                    <li>Managed the technical aspect of our vehicle’s virtual and physical builds, including coordinating the work of eight system leads and over 30 other team members
                                     </li>
-                                    <li>Applied the stiffness optimization software discussed below in designing the
-                                        2019 frame
+                                    <li>Applied the stiffness optimization software discussed below in designing the 2019 frame
                                     </li>
-                                    <li>Created Gantt charts to outline the design, manufacturing, and assembly
-                                        cycles
-                                        of the vehicle
+                                    <li>Created Gantt charts to outline the design, manufacturing, and assembly cycles of the vehicle
                                     </li>
-                                    <li>Assisted overhaul of existing data acquisition and telemetry systems to
-                                        incorporate strain gauges and a web interface for displaying critical
-                                        system
-                                        information
+                                    <li>Assisted overhaul of existing data acquisition and telemetry systems to incorporate strain gauges and a web interface for displaying critical system information
                                     </li>
                                 </ul>
                                 <img class="img-fluid" src="fullCarDrawing.jpg" alt="Full Car Drawing">
@@ -182,8 +173,7 @@
                     <div class="card">
                         <div class="card-header" id="headingTwo">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                    aria-expanded="true" aria-controls="collapseTwo">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                                     <span class="float-left">
                                         <b>Chassis and Ergonomics System Lead</b> - WashU Racing
                                     </span>
@@ -196,14 +186,11 @@
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                             <div class="card-body">
                                 <ul>
-                                    <li>Improved frame geometry to more comfortably seat the driver and increase engine
-                                        serviceability
+                                    <li>Improved frame geometry to more comfortably seat the driver and increase engine serviceability
                                     </li>
-                                    <li>Fully re-designed the pedals, seat and shifter handle, improving driver control
-                                        versus the 2017 car
+                                    <li>Fully re-designed the pedals, seat and shifter handle, improving driver control versus the 2017 car
                                     </li>
-                                    <li>Helped design and install a hard-line braking system; optimized brake bias using
-                                        pressure sensors
+                                    <li>Helped design and install a hard-line braking system; optimized brake bias using pressure sensors
                                     </li>
                                 </ul>
                                 <img class="img-fluid" src="frame.jpg" alt="Frame">
@@ -213,8 +200,7 @@
                     <div class="card">
                         <div class="card-header" id="headingThree">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse"
-                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     <span class="float-left">
                                         <b>Suspension Team Member</b> - WashU Racing
                                     </span>
@@ -224,8 +210,7 @@
                                 </button>
                             </h5>
                         </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                            data-parent="#accordion">
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                             <div class="card-body">
                                 <ul>
                                     <li>Developed Solidworks modeling skills
@@ -240,8 +225,7 @@
                     <div class="card">
                         <div class="card-header" id="headingFour">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse"
-                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                     <span class="float-left">
                                         <b>Stiffness Optimization Software</b> - Independent Algorithm Development
                                     </span>
@@ -254,14 +238,11 @@
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                             <div class="card-body">
                                 <ul>
-                                    <li>Developed a genetic algorithm to optimize torsional stiffness w.r.t. weight
-                                        using direct stiffness method
+                                    <li>Developed a genetic algorithm to optimize torsional stiffness w.r.t. weight using direct stiffness method
                                     </li>
-                                    <li>Designed and fabricated a torsional stiffness testing apparatus to validate the
-                                        simulation’s predictions
+                                    <li>Designed and fabricated a torsional stiffness testing apparatus to validate the simulation’s predictions
                                     </li>
-                                    <li>Parallelized the algorithm for efficiency and developed a web GUI for the
-                                        software using Python and the Django framework
+                                    <li>Parallelized the algorithm for efficiency and developed a web GUI for the software using Python and the Django framework
                                     </li>
                                 </ul>
                                 <img class="img-fluid" src="graph.png" alt="Simulation Graphs">
@@ -271,8 +252,7 @@
                     <div class="card">
                         <div class="card-header" id="headingFive">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse"
-                                    data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                     <span class="float-left">
                                         <b>Teaching Assistant</b> - Intro to Computer Engineering
                                     </span>
@@ -285,9 +265,7 @@
                         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
                             <div class="card-body">
                                 <ul>
-                                    <li>Helped students program Arduinos to interface with hardware components and
-                                        develop an understanding of computer architecture, protocol design and data
-                                        representation
+                                    <li>Helped students program Arduinos to interface with hardware components and develop an understanding of computer architecture, protocol design and data representation
                                     </li>
                                 </ul>
                                 <img class="img-fluid" src="arduino.JPG" alt="Example Arduino Project">
@@ -307,51 +285,30 @@
                     Fluency:
                 </div>
                 <div class="skill-flex d-flex flex-wrap">
-                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
-                        title="Experience:" data-placement="top" data-content="Used MATLAB to code the first draft of my stiffness optimization software. Also used it extensively in
+                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" title="Experience:" data-placement="top" data-content="Used MATLAB to code the first draft of my stiffness optimization software. Also used it extensively in
                         Intro to Machine Learning.">MATLAB</a>
-                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
-                        title="Experience:" data-placement="top"
-                        data-content="Used in my first four computer science classes at WashU, and it was my first programming language.">Java</a>
-                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
-                        title="Experience:" data-placement="top"
-                        data-content="In addition to personal website projects, I have used HTML and CSS extensively in my classes.">HTML/CSS</a>
-                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
-                        title="Experience:" data-placement="top"
-                        data-content="Used in my web development and rapid prototyping classes in addition to personal creative projects.">JavaScript
+                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" title="Experience:" data-placement="top" data-content="Used in my first four computer science classes at WashU, and it was my first programming language.">Java</a>
+                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" title="Experience:" data-placement="top" data-content="In addition to personal website projects, I have used HTML and CSS extensively in my classes.">HTML/CSS</a>
+                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" title="Experience:" data-placement="top" data-content="Used in my web development and rapid prototyping classes in addition to personal creative projects.">JavaScript
                         and jQuery</a>
-                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
-                        title="Experience:" data-placement="top" data-content="Used to code my stiffness optimization software, which is object-oriented and supports multithreading. Also
+                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" title="Experience:" data-placement="top" data-content="Used to code my stiffness optimization software, which is object-oriented and supports multithreading. Also
                         used to develop a web interface for that software with Django (still in progress).">Python
                         (w/Django)</a>
-                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
-                        title="Experience:" data-placement="top"
-                        data-content="Coded several command-line programs as part of my Object-Oriented Programming Lab.">C++</a>
+                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" title="Experience:" data-placement="top" data-content="Coded several command-line programs as part of my Object-Oriented Programming Lab.">C++</a>
 
-                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
-                        title="Experience:" data-placement="top"
-                        data-content="Extremely experienced with this software as I used it throughout my time on the WashU Racing team (see my full car model above).">Solidworks</a>
+                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" title="Experience:" data-placement="top" data-content="Extremely experienced with this software as I used it throughout my time on the WashU Racing team (see my full car model above).">Solidworks</a>
 
-                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
-                        title="Experience:" data-placement="top"
-                        data-content="Proficient in all the major programs, including MS Project.">MS Office</a>
+                    <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" title="Experience:" data-placement="top" data-content="Proficient in all the major programs, including MS Project.">MS Office</a>
                 </div>
                 <div class="skill-label text-muted">
                     <div class="skill-label text-muted">
                         Proficiency:
                     </div>
                     <div class="skill-flex d-flex">
-                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
-                            title="Experience:" data-placement="top"
-                            data-content="Used in several Rapid Prototyping Projects (file serving, user authentication, database management).">PHP</a>
-                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
-                            title="Experience:" data-placement="top"
-                            data-content="Used in my Rapid Prototyping projects for database management.">MySQL</a>
-                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
-                            title="Experience:" data-placement="top"
-                            data-content="Used to write reports in most of my computer science classes.">LaTeX</a>
-                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
-                            title="Experience:" data-placement="top" data-content="Used to make CAM programs for 3-axis milling. I have milled foam, wood and metals for uses ranging from composite molds to shifter handles
+                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" title="Experience:" data-placement="top" data-content="Used in several Rapid Prototyping Projects (file serving, user authentication, database management).">PHP</a>
+                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" title="Experience:" data-placement="top" data-content="Used in my Rapid Prototyping projects for database management.">MySQL</a>
+                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" title="Experience:" data-placement="top" data-content="Used to write reports in most of my computer science classes.">LaTeX</a>
+                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" title="Experience:" data-placement="top" data-content="Used to make CAM programs for 3-axis milling. I have milled foam, wood and metals for uses ranging from composite molds to shifter handles
                             for the WashU Racing vehicle.">FeatureCAM</a>
                     </div>
                 </div>
@@ -360,16 +317,11 @@
                         Other Skills:
                     </div>
                     <div class="skill-flex d-flex">
-                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
-                            title="Experience:" data-placement="top"
-                            data-content="As Chief Engineer on the WashU Racing team, I was responsible for managing over 30 active members during the development of the vehicle.">Team
+                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" title="Experience:" data-placement="top" data-content="As Chief Engineer on the WashU Racing team, I was responsible for managing over 30 active members during the development of the vehicle.">Team
                             Management</a>
-                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
-                            title="Experience:" data-placement="top" data-content="Took 5 years of Spanish classes in high school, in addition to attending a fully bilingual elementary school. Have taken
+                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" title="Experience:" data-placement="top" data-content="Took 5 years of Spanish classes in high school, in addition to attending a fully bilingual elementary school. Have taken
                             cultural-immersion trips to Costa Rica and Cuba.">Conversational in Spanish</a>
-                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus"
-                            title="Experience:" data-placement="top"
-                            data-content="Making music is a passionate hobby of mine. I have acquired a lot of experience recording out of my home studio. I have also dabble in video production.">Audio/Video
+                        <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" title="Experience:" data-placement="top" data-content="Making music is a passionate hobby of mine. I have acquired a lot of experience recording out of my home studio. I have also dabble in video production.">Audio/Video
                             Recording and Editing</a>
                     </div>
 
@@ -404,8 +356,7 @@
                     9/2015 to 4/2016
                 </div>
                 <ul>
-                    <li>Responded to patient requests ranging from ordering their food to notifying nurses of any
-                        emergencies
+                    <li>Responded to patient requests ranging from ordering their food to notifying nurses of any emergencies
                     </li>
                     <li>Staffed the telephone and desk area while nurses were busy</li>
                 </ul>
@@ -422,13 +373,9 @@
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-        <script src="customJS.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>
