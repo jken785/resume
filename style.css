@@ -149,9 +149,20 @@ div {
     color: #DDDDDD;
 }
 
-.portfolio {}
+.portfolio {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
-.portfolio-item {}
+.portfolio-item {
+    padding: 5px;
+    width: 100%;
+}
+
+.portfolio-item img {
+    border-radius: 5px;
+}
 
 #contactAux a {
     transition: .2s;
