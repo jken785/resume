@@ -2,7 +2,7 @@ $(document).ready(function() {
     setMainMargin();
     setContactInfoFormat();
     $(this).scrollTop(0);
-    // window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     startupAnimation();
 });
 
