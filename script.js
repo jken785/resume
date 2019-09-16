@@ -8,13 +8,13 @@ function setMainMargin() {
     let headerHeight = $('#header-container').outerHeight();
     let mainMargin = String(headerHeight + 40) + "px";
     $('#main').css({
-        "margin-top": mainMargin
+        "padding-top": mainMargin
     });
 }
 
 function startupAnimation() {
     $('body').animate({ opacity: "1" }, { duration: 500, queue: false });
-    $('.ani').animate({ marginTop: "20px" }, { duration: 500 });
+    $('.ani').animate({ marginTop: "60px" }, { duration: 500 });
 }
 
 $(window).resize(function() {
@@ -47,7 +47,7 @@ $(document).scroll(function() {
         });
     } else if (scroll > 0 && scroll < 150) {
         if (isScrolledDown) {
-            $('#contactAux').animate({ top: "-40px" }, { duration: 250 });
+            $('#contactAux').animate({ top: "-40px" }, { duration: 200 });
             isScrolledDown = false;
         }
         let newHeight = String(origImgHeight - (scroll)) + "px";
@@ -55,7 +55,7 @@ $(document).scroll(function() {
             'height': newHeight
         });
 
-        let newOpacity = String(1 - (scroll / 150));
+        let newOpacity = String(1 - (scroll / 75));
         $('#contact td').css({
             'opacity': newOpacity
         });
@@ -77,7 +77,7 @@ $(document).scroll(function() {
         });
     } else {
         if (!isScrolledDown) {
-            $('#contactAux').animate({ top: "20px" }, { duration: 400 });
+            $('#contactAux').animate({ top: "20px" }, { duration: 200 });
             isScrolledDown = true;
             $('.photo > img').css({
                 'height': "50px"
@@ -97,6 +97,17 @@ $(document).scroll(function() {
         }
     }
 
+});
+
+var showActive = true;
+$('#classToggle').click(function() {
+    if (showActive) {
+        $('#classToggle').text("Hide Classes");
+        showActive = false;
+    } else {
+        $('#classToggle').text("Show Classes");
+        showActive = true;
+    }
 });
 
 $(function() {

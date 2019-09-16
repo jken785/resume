@@ -1,10 +1,14 @@
+html {
+    background: black;
+}
+
 body {
     background-image: url('white-texture.png');
     opacity: 0;
     overflow-x: auto;
     overflow-y: scroll;
     margin: 0;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 }
 
 .container {
@@ -20,7 +24,7 @@ body {
 }
 
 .row {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 ul {
@@ -53,7 +57,9 @@ a {
 }
 
 #classes {
-    padding: 10px;
+    width: 90%;
+    font-size: 13px;
+    padding: 5px;
     margin-left: 10px;
 }
 
@@ -140,7 +146,12 @@ div {
     color: #DDDDDD;
 }
 
+.portfolio {}
+
+.portfolio-item {}
+
 #contactAux a {
+    transition: .2s;
     color: #DDDDDD
 }
 
@@ -151,7 +162,7 @@ hr {
 }
 
 .ani {
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
 #main {}
