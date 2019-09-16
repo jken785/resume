@@ -58,9 +58,22 @@ $(document).scroll(function() {
         $('h1').css({
             'font-size': "4vw"
         });
+        $('#contactAux').css({
+            'top': '-40px',
+            'opacity': '1'
+        });
     } else if (scroll > 0 && scroll < 150) {
         if (isScrolledDown) {
-            $('#contactAux').animate({ top: "-40px" }, { duration: 200 });
+            if ($(window).width() > 768) {
+                $('#contactAux').animate({ top: "-40px" }, { duration: 200 });
+
+            } else {
+                $('#contactAux').animate({ opacity: "0" }, { duration: 200 });
+                $('#contactAux').css({
+                    'top': '-40px',
+                    'opacity': '1'
+                });
+            }
             isScrolledDown = false;
         }
         let newHeight = String(origImgHeight - (scroll)) + "px";
@@ -102,12 +115,13 @@ $(document).scroll(function() {
         if (!isScrolledDown) {
             if ($(window).width() > 768) {
                 $('#contactAux').animate({ top: "20px" }, { duration: 200 });
-
             } else {
-                $('#contactAux').animate({ top: "60px" }, { duration: 200 });
-
+                $('#contactAux').css({
+                    'top': '60px',
+                    'opacity': '0'
+                });
+                $('#contactAux').animate({ opacity: "1" }, { duration: 200 });
             }
-
             isScrolledDown = true;
             $('.photo > img').css({
                 'height': "50px"
