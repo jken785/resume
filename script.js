@@ -1,10 +1,10 @@
 $(document).ready(function() {
-    setMainMargin();
-    setContactInfoFormat();
     $(this).scrollTop(0);
     setTimeout(function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 200);
+    setContactInfoFormat();
+    setMainMargin();
     startupAnimation();
 });
 
