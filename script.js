@@ -1,7 +1,8 @@
 $(document).ready(function() {
     setMainMargin();
     setContactInfoFormat();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    $(this).scrollTop(0);
+    // window.scrollTo({ top: 0, behavior: 'smooth' });
     startupAnimation();
 });
 
