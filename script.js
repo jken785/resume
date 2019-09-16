@@ -1,7 +1,7 @@
 $(document).ready(function() {
     setMainMargin();
     setContactInfoFormat();
-    $(document).scrollTop(0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     startupAnimation();
 });
 
@@ -114,7 +114,7 @@ $(document).scroll(function() {
                 'margin-top': '0px'
             });
 
-            if ($(window.width() > 768)) {
+            if ($(window).width() > 768) {
                 $('h1').css({
                     'font-size': "2vw"
                 });
