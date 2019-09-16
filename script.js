@@ -1,8 +1,21 @@
 $(document).ready(function() {
     setMainMargin();
+    setContactInfoFormat();
     $(document).scrollTop(0);
     startupAnimation();
 });
+
+$(window).resize(function() {
+    setContactInfoFormat();
+});
+
+function setContactInfoFormat() {
+    if ($(window).width() < 768) {
+        $('#contactTable').html('<tr><td class="left">785 Snowbird Lane</td></tr><tr><td class="left">Lafayette, CO 80026</td></tr><tr><td>720-545-6432</td></tr><tr><td><a href="mailto:jake.kendrick@gmail.com">jake.kendrick@gmail.com</a></td></tr>');
+    } else {
+        $('#contactTable').html('<tr><td class="left">785 Snowbird Lane</td><td>720-545-6432</td></tr><tr><td class="left">Lafayette, CO 80026</td><td><a href="mailto:jake.kendrick@gmail.com">jake.kendrick@gmail.com</a></td></tr>');
+    }
+}
 
 function setMainMargin() {
     let headerHeight = $('#header-container').outerHeight();
@@ -68,16 +81,25 @@ $(document).scroll(function() {
             'padding-top': String(20 - (scroll / 10)) + "px"
         });
 
-        $('h1').css({
-            'font-size': String(4 - (scroll / 75)) + "vw"
-        });
+        if ($(window).width() > 768) {
+            $('h1').css({
+                'font-size': String(4 - (scroll / 75)) + "vw"
+            });
+        }
 
         $('.nameAndContact').css({
             'margin-top': String(-50 + (scroll / 3)) + "px"
         });
     } else {
         if (!isScrolledDown) {
-            $('#contactAux').animate({ top: "20px" }, { duration: 200 });
+            if ($(window).width() > 768) {
+                $('#contactAux').animate({ top: "20px" }, { duration: 200 });
+
+            } else {
+                $('#contactAux').animate({ top: "25px" }, { duration: 200 });
+
+            }
+
             isScrolledDown = true;
             $('.photo > img').css({
                 'height': "50px"
@@ -91,9 +113,13 @@ $(document).scroll(function() {
             $('.nameAndContact').css({
                 'margin-top': '0px'
             });
-            $('h1').css({
-                'font-size': "2vw"
-            });
+
+            if ($(window.width() > 768)) {
+                $('h1').css({
+                    'font-size': "2vw"
+                });
+            }
+
         }
     }
 
