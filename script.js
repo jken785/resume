@@ -1,25 +1,25 @@
+var avatarSize = 0;
+var isScrolledDown = false;
+
 $(document).ready(function() {
     $(this).scrollTop(0);
     setTimeout(function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 200);
+    setImageSize();
     setContactInfoFormat();
-    if ($(window).width() > 768) {
-        $('#contactAux').animate({ top: "-40px" }, { duration: 200 });
-    } else {
-        $('#contactAux').css({
-            'top': '-40px',
-            'opacity': '1'
-        });
-    }
-    $('.photo > img').css({
-        'height': String(origImgHeight)
-    });
-    $('#contact').css({
-        'display': 'block'
-    });
-    $('#contact td').animate({ opacity: "1" }, { duration: 200 });
+    setTopCSS();
+    setMainMargin();
+    startupAnimation();
+});
 
+function setTopCSS() {
+    $('.photo > img').css({
+        'height': String(avatarSize) + 'px'
+    });
+    $('#contact td').css({
+        'opacity': "1"
+    });
     $('.nameAndContact').css({
         'margin-top': '-50px'
     });
@@ -30,12 +30,106 @@ $(document).ready(function() {
         'top': '-40px',
         'opacity': '1'
     });
-    setMainMargin();
-    startupAnimation();
-});
+}
+
+function setInterCSS(scroll) {
+    if (isScrolledDown) {
+        if ($(window).width() > 768) {
+            $('#contactAux').animate({ top: "-40px" }, { duration: 200 });
+        } else {
+            $('#contactAux').animate({ opacity: "0" }, { duration: 200 });
+            $('#contactAux').css({
+                'top': '-40px',
+                'opacity': '1'
+            });
+        }
+        isScrolledDown = false;
+    }
+    let newHeight = String(avatarSize - (scroll)) + "px";
+    $('.photo > img').css({
+        'height': newHeight
+    });
+
+    let newOpacity = String(1 - (scroll / 50));
+    $('#contact td').css({
+        'opacity': newOpacity
+    });
+    $('#contact').css({
+        'display': 'block'
+    });
+
+    if ($(window).width() > 768) {
+        $('#header-container').css({
+            'padding-bottom': String(20 - (scroll / 10)) + "px",
+            'padding-top': String(20 - (scroll / 10)) + "px"
+        });
+        $('h1').css({
+            'font-size': String(4 - 2 * (scroll / (avatarSize - 50))) + "vw"
+        });
+    } else {
+        $('#header-container').css({
+            'padding-bottom': String(20 + 7.5 * (scroll / (avatarSize - 50))) + "px",
+            'padding-top': String(20 - 15 * (scroll / (avatarSize - 50))) + "px"
+        });
+    }
+    $('.nameAndContact').css({
+        'margin-top': String(-50 + 50 * (scroll / (avatarSize - 50))) + "px"
+    });
+}
+
+function setBottomCSS() {
+    if (!isScrolledDown) {
+        if ($(window).width() > 768) {
+            $('#contactAux').animate({ top: "20px" }, { duration: 200 });
+        } else {
+            $('#contactAux').css({
+                'top': '60px',
+                'opacity': '0'
+            });
+            $('#contactAux').animate({ opacity: "1" }, { duration: 200 });
+        }
+        isScrolledDown = true;
+        $('.photo > img').css({
+            'height': "50px"
+        });
+        $('#contact td').css({
+            'opacity': '0'
+        });
+        $('#contact').css({
+            'display': 'none'
+        });
+        $('.nameAndContact').css({
+            'margin-top': '0px'
+        });
+
+        if ($(window).width() > 768) {
+            $('h1').css({
+                'font-size': "2vw"
+            });
+        }
+
+    }
+}
+
+function setImageSize() {
+    if ($(window).width() <= 768) {
+        $('.photo>img').css({ 'height': '125px' });
+    } else {
+        $('.photo>img').css({ 'height': '200px' });
+    }
+    avatarSize = parseInt($('.photo>img').css('height'));
+}
 
 $(window).resize(function() {
+    setImageSize();
     setContactInfoFormat();
+
+    let width = $(window).width();
+    if (width <= 768) {
+        $('#main').removeClass('container').addClass('container-fluid');
+    } else {
+        $('#main').removeClass('container-fluid').addClass('container');
+    }
 });
 
 function setContactInfoFormat() {
@@ -59,116 +153,15 @@ function startupAnimation() {
     $('.ani').animate({ marginTop: "60px" }, { duration: 500 });
 }
 
-$(window).resize(function() {
-    let width = $(window).width();
-    if (width <= 768) {
-        $('#main').removeClass('container').addClass('container-fluid');
-    } else {
-        $('#main').removeClass('container-fluid').addClass('container');
-    }
-});
-
-var isScrolledDown = false;
-let origImgHeight = parseInt($('.photo > img').css('height'), 10);
 $(document).scroll(function() {
     let scroll = $(document).scrollTop();
-
     if (scroll <= 0) {
-        $('.photo > img').css({
-            'height': String(origImgHeight)
-        });
-        $('#contact td').css({
-            'opacity': "1"
-        });
-        $('.nameAndContact').css({
-            'margin-top': '-50px'
-        });
-        $('h1').css({
-            'font-size': "4vw"
-        });
-        $('#contactAux').css({
-            'top': '-40px',
-            'opacity': '1'
-        });
-    } else if (scroll > 0 && scroll < 150) {
-        if (isScrolledDown) {
-            if ($(window).width() > 768) {
-                $('#contactAux').animate({ top: "-40px" }, { duration: 200 });
-            } else {
-                $('#contactAux').animate({ opacity: "0" }, { duration: 200 });
-                $('#contactAux').css({
-                    'top': '-40px',
-                    'opacity': '1'
-                });
-            }
-            isScrolledDown = false;
-        }
-        let newHeight = String(origImgHeight - (scroll)) + "px";
-        $('.photo > img').css({
-            'height': newHeight
-        });
-
-        let newOpacity = String(1 - (scroll / 75));
-        $('#contact td').css({
-            'opacity': newOpacity
-        });
-        $('#contact').css({
-            'display': 'block'
-        });
-
-        if ($(window).width() > 768) {
-            $('#header-container').css({
-                'padding-bottom': String(20 - (scroll / 10)) + "px",
-                'padding-top': String(20 - (scroll / 10)) + "px"
-            });
-        } else {
-            $('#header-container').css({
-                'padding-bottom': String(20 + (scroll / 20)) + "px",
-                'padding-top': String(20 - (scroll / 10)) + "px"
-            });
-        }
-        if ($(window).width() > 768) {
-            $('h1').css({
-                'font-size': String(4 - (scroll / 75)) + "vw"
-            });
-        }
-        $('.nameAndContact').css({
-            'margin-top': String(-50 + (scroll / 3)) + "px"
-        });
+        setTopCSS();
+    } else if (scroll > 0 && scroll < (avatarSize - 50)) {
+        setInterCSS(scroll);
     } else {
-        if (!isScrolledDown) {
-            if ($(window).width() > 768) {
-                $('#contactAux').animate({ top: "20px" }, { duration: 200 });
-            } else {
-                $('#contactAux').css({
-                    'top': '60px',
-                    'opacity': '0'
-                });
-                $('#contactAux').animate({ opacity: "1" }, { duration: 200 });
-            }
-            isScrolledDown = true;
-            $('.photo > img').css({
-                'height': "50px"
-            });
-            $('#contact td').css({
-                'opacity': '0'
-            });
-            $('#contact').css({
-                'display': 'none'
-            });
-            $('.nameAndContact').css({
-                'margin-top': '0px'
-            });
-
-            if ($(window).width() > 768) {
-                $('h1').css({
-                    'font-size': "2vw"
-                });
-            }
-
-        }
+        setBottomCSS();
     }
-
 });
 
 var showActive = true;
