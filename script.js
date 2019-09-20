@@ -159,7 +159,7 @@ $(document).scroll(function() {
         setTopCSS();
     } else if (scroll > 0 && scroll < (avatarSize - 50)) {
         setInterCSS(scroll);
-    } else {
+    } else if (scroll > avatarSize - 50 && scroll < 500) {
         setBottomCSS();
     }
 });
