@@ -1,5 +1,6 @@
 var avatarSize = 0;
 var isScrolledDown = false;
+var prevWidth = 0;
 
 $(document).ready(function() {
     $(this).scrollTop(0);
@@ -132,14 +133,17 @@ function setImageSize() {
 }
 
 $(window).resize(function() {
-    setImageSize();
-    setContactInfoFormat();
+    if ($(window).width() != prevWidth) {
+        setImageSize();
+        setContactInfoFormat();
 
-    let width = $(window).width();
-    if (width <= 768) {
-        $('#main').removeClass('container').addClass('container-fluid');
-    } else {
-        $('#main').removeClass('container-fluid').addClass('container');
+        let width = $(window).width();
+        if (width <= 768) {
+            $('#main').removeClass('container').addClass('container-fluid');
+        } else {
+            $('#main').removeClass('container-fluid').addClass('container');
+        }
+        prevWidth = $(window).width();
     }
 });
 
