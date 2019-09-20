@@ -267,6 +267,9 @@ hr {
     .skill-flex>a {
         font-size: 11px;
     }
+    #classes {
+        font-size: 11px;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 900px) {
@@ -277,6 +280,9 @@ hr {
         font-size: 12px;
     }
     body {
+        font-size: 12px;
+    }
+    #classes {
         font-size: 12px;
     }
 }
