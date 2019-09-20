@@ -4,6 +4,32 @@ $(document).ready(function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 200);
     setContactInfoFormat();
+    if ($(window).width() > 768) {
+        $('#contactAux').animate({ top: "-40px" }, { duration: 200 });
+    } else {
+        $('#contactAux').css({
+            'top': '-40px',
+            'opacity': '1'
+        });
+    }
+    $('.photo > img').css({
+        'height': String(origImgHeight)
+    });
+    $('#contact').css({
+        'display': 'block'
+    });
+    $('#contact td').animate({ opacity: "1" }, { duration: 200 });
+
+    $('.nameAndContact').css({
+        'margin-top': '-50px'
+    });
+    $('h1').css({
+        'font-size': "4vw"
+    });
+    $('#contactAux').css({
+        'top': '-40px',
+        'opacity': '1'
+    });
     setMainMargin();
     startupAnimation();
 });
@@ -51,7 +77,6 @@ $(document).scroll(function() {
         $('.photo > img').css({
             'height': String(origImgHeight)
         });
-
         $('#contact td').css({
             'opacity': "1"
         });
@@ -69,7 +94,6 @@ $(document).scroll(function() {
         if (isScrolledDown) {
             if ($(window).width() > 768) {
                 $('#contactAux').animate({ top: "-40px" }, { duration: 200 });
-
             } else {
                 $('#contactAux').animate({ opacity: "0" }, { duration: 200 });
                 $('#contactAux').css({
@@ -103,14 +127,11 @@ $(document).scroll(function() {
                 'padding-top': String(20 - (scroll / 10)) + "px"
             });
         }
-
-
         if ($(window).width() > 768) {
             $('h1').css({
                 'font-size': String(4 - (scroll / 75)) + "vw"
             });
         }
-
         $('.nameAndContact').css({
             'margin-top': String(-50 + (scroll / 3)) + "px"
         });
