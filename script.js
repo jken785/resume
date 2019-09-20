@@ -30,6 +30,17 @@ function setTopCSS() {
         'top': '-40px',
         'opacity': '1'
     });
+    if ($(window).width() > 768) {
+        $('#header-container').css({
+            'padding-bottom': String(20) + "px",
+            'padding-top': String(20) + "px"
+        });
+    } else {
+        $('#header-container').css({
+            'padding-bottom': String(20) + "px",
+            'padding-top': String(20) + "px"
+        });
+    }
 }
 
 function setInterCSS(scroll) {
