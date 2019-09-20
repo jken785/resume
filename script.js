@@ -60,8 +60,8 @@ function setInterCSS(scroll) {
 
     if ($(window).width() > 768) {
         $('#header-container').css({
-            'padding-bottom': String(20 - (scroll / 10)) + "px",
-            'padding-top': String(20 - (scroll / 10)) + "px"
+            'padding-bottom': String(20 - 15 * (scroll / (avatarSize - 50))) + "px",
+            'padding-top': String(20 - 15 * (scroll / (avatarSize - 50))) + "px"
         });
         $('h1').css({
             'font-size': String(4 - 2 * (scroll / (avatarSize - 50))) + "vw"
@@ -159,7 +159,7 @@ $(document).scroll(function() {
         setTopCSS();
     } else if (scroll > 0 && scroll < (avatarSize - 50)) {
         setInterCSS(scroll);
-    } else if (scroll > avatarSize - 50 && scroll < 500) {
+    } else {
         setBottomCSS();
     }
 });
