@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-image: url('white-texture.png');
+    background-image: url('textures/white-texture.png');
     opacity: 0;
     overflow-x: auto;
     overflow-y: scroll;
@@ -169,6 +169,13 @@ div {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.skillsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+}
+
+.skillsGridItem {}
+
 .portfolio-item {
     padding: 5px;
     width: 100%;
@@ -209,7 +216,7 @@ hr {
     top: 0px;
     position: fixed;
     z-index: 2;
-    background-image: url("tweed.png");
+    background-image: url("textures/tweed.png");
 }
 
 #desktop-header {
@@ -223,9 +230,11 @@ hr {
 
 .skill-flex {
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .skill-flex>a {
+    font-size: 14px;
     margin-right: 8px;
     margin-bottom: 8px;
 }
@@ -241,6 +250,9 @@ hr {
 }
 
 @media only screen and (max-width: 768px) {
+    body {
+        font-size: 10px;
+    }
     .lead {
         margin-bottom: 5px;
     }
@@ -252,11 +264,20 @@ hr {
         padding-right: 75px;
         padding-left: 75px;
     }
+    .skill-flex>a {
+        font-size: 11px;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 900px) {
     #contact {
         font-size: 10px;
+    }
+    .skill-flex>a {
+        font-size: 12px;
+    }
+    body {
+        font-size: 12px;
     }
 }
 
